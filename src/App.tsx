@@ -3,16 +3,24 @@ import Login from "./pages/Login";
 import { DashboardLayout, Dashboard } from "./pages/Dashboard";
 import Users from "./pages/Users";
 import UserDetails from "./pages/UserDetails";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public routes */}
+        {/* Public route */}
         <Route path="/login" element={<Login />} />
 
         {/* Protected routes (Dashboard layout) */}
-        <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<Dashboard />} />
           <Route path="users" element={<Users />} />
           <Route path="users/:id" element={<UserDetails />} />

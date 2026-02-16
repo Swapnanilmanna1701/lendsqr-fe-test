@@ -1,5 +1,6 @@
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
+import { getFromLocalStorage } from "../../utils/localStorage";
 import "./Login.scss";
 
 const Login = () => {
@@ -10,6 +11,14 @@ const Login = () => {
   const [errors, setErrors] = useState<{ email?: string; password?: string }>(
     {}
   );
+
+  // Redirect to dashboard if already authenticated
+  useEffect(() => {
+    const auth = getFromLocalStorage<{ isAuthenticated: boolean }>("lendsqr_auth");
+    if (auth?.isAuthenticated) {
+      navigate("/dashboard", { replace: true });
+    }
+  }, [navigate]);
 
   const validate = (): boolean => {
     const newErrors: { email?: string; password?: string } = {};

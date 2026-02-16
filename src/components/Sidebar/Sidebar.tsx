@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { removeFromLocalStorage } from "../../utils/localStorage";
 import "./Sidebar.scss";
 
 interface SidebarProps {
@@ -264,6 +265,13 @@ const menuSections: MenuSection[] = [
 /* ──────────────────── Sidebar Component ──────────────────── */
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    removeFromLocalStorage("lendsqr_auth");
+    navigate("/login");
+  };
+
   return (
     <>
       {/* Mobile backdrop overlay */}
@@ -322,10 +330,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <hr className="sidebar__divider" />
 
         {/* Logout */}
-        <a className="sidebar__menu-item sidebar__logout" href="#">
+        <button
+          type="button"
+          className="sidebar__menu-item sidebar__logout"
+          onClick={handleLogout}
+        >
           <LogoutIcon />
           <span>Logout</span>
-        </a>
+        </button>
 
         {/* Version */}
         <p className="sidebar__version">v1.2.0</p>

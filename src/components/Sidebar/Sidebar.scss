@@ -152,6 +152,12 @@
   /* ──────────── Logout ──────────── */
 
   &__logout {
+    width: 100%;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: left;
     color: $primary-color;
 
     &:hover {

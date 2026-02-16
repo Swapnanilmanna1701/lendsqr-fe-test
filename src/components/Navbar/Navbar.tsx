@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { getFromLocalStorage } from "../../utils/localStorage";
 import "./Navbar.scss";
 
 interface NavbarProps {
@@ -7,6 +8,14 @@ interface NavbarProps {
 
 const Navbar = ({ onMenuToggle }: NavbarProps) => {
   const [searchValue, setSearchValue] = useState("");
+
+  const displayName = useMemo(() => {
+    const auth = getFromLocalStorage<{ email: string }>("lendsqr_auth");
+    if (!auth?.email) return "User";
+    // Extract the part before '@' and capitalise the first letter
+    const name = auth.email.split("@")[0].replace(/[._-]/g, " ");
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -105,11 +114,11 @@ const Navbar = ({ onMenuToggle }: NavbarProps) => {
         <div className="navbar__user">
           <div className="navbar__avatar">
             <img
-              src="https://api.dicebear.com/7.x/avataaars/svg?seed=Adedeji"
+              src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${displayName}`}
               alt="User avatar"
             />
           </div>
-          <span className="navbar__username">Adedeji</span>
+          <span className="navbar__username">{displayName}</span>
           <svg
             className="navbar__caret"
             width="12"

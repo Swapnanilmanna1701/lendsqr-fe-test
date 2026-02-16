@@ -1,0 +1,208 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navbar-height;
+  background: $white;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.04);
+  z-index: 100;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font-family;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 0 20px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+    height: 70px;
+  }
+
+  // ── Left section: hamburger + logo ──
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  &__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    @include flex-center;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+  }
+
+  &__logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: -0.02em;
+    text-transform: lowercase;
+  }
+
+  // ── Center section: search bar ──
+  &__search {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 20px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__search-input {
+    flex: 1;
+    height: 40px;
+    border: 1px solid rgba(84, 95, 125, 0.15);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    padding: 0 16px;
+    font-family: $font-family;
+    font-size: 14px;
+    color: $text-primary;
+    background: $white;
+    outline: none;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $text-secondary;
+      font-size: 14px;
+    }
+
+    &:focus {
+      border-color: rgba(84, 95, 125, 0.35);
+    }
+  }
+
+  &__search-btn {
+    width: 56px;
+    height: 40px;
+    background: $secondary-color;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    @include flex-center;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: darken(#39CDCC, 5%);
+    }
+  }
+
+  // ── Right section: docs, bell, user ──
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+
+    @include mobile {
+      gap: 16px;
+    }
+  }
+
+  &__docs {
+    font-size: 16px;
+    color: $primary-color;
+    text-decoration: underline;
+    font-weight: 400;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__notification {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    @include flex-center;
+    position: relative;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #E5E5E5;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include mobile {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__username {
+    font-size: 16px;
+    color: $primary-color;
+    font-weight: 500;
+    white-space: nowrap;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__caret {
+    flex-shrink: 0;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

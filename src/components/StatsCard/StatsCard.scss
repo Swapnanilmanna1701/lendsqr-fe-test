@@ -1,0 +1,38 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.stats-card {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 30px;
+  box-shadow: $box-shadow;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include flex-center;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-secondary;
+    text-transform: uppercase;
+    margin-top: 14px;
+    letter-spacing: 0.04em;
+  }
+
+  &__value {
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,94 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.filter-popup {
+  position: absolute;
+  z-index: 10;
+  width: 270px;
+  padding: 30px;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: $dropdown-shadow;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__label {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 500;
+    color: $text-secondary;
+  }
+
+  &__input,
+  &__select {
+    height: 40px;
+    border: 1px solid rgba(84, 95, 125, 0.15);
+    border-radius: 8px;
+    font-family: $font-family;
+    font-size: 14px;
+    color: $text-primary;
+    padding: 0 12px;
+    outline: none;
+    background: $white;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $text-secondary;
+    }
+
+    &:focus {
+      border-color: $secondary-color;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23213F7D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+  }
+
+  &__btn {
+    flex: 1;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &--reset {
+      background: transparent;
+      border: 1px solid $text-secondary;
+      color: $text-secondary;
+    }
+
+    &--filter {
+      background: $secondary-color;
+      color: $white;
+    }
+  }
+}

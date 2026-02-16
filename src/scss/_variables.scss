@@ -1,0 +1,46 @@
+// Lendsqr Admin Console - Design Tokens & Variables
+
+// Primary Colors
+$primary-color: #213F7D;
+$secondary-color: #39CDCC;
+
+// Background Colors
+$bg-color: #FBFBFB;
+$white: #FFFFFF;
+
+// Text Colors
+$text-primary: #213F7D;
+$text-secondary: #545F7D;
+$text-dark: #213F7D;
+
+// Status Colors
+$status-active: #39CD62;
+$status-inactive: #E4033B;
+$status-pending: #E9B200;
+$status-blacklisted: #E4033B;
+
+// Status Background Colors
+$status-active-bg: rgba(57, 205, 98, 0.06);
+$status-inactive-bg: rgba(228, 3, 59, 0.1);
+$status-pending-bg: rgba(233, 178, 0, 0.1);
+$status-blacklisted-bg: rgba(228, 3, 59, 0.1);
+
+// Border
+$border-color: rgba(33, 63, 125, 0.06);
+
+// Layout
+$sidebar-width: 283px;
+$navbar-height: 100px;
+
+// Typography
+$font-family: 'Work Sans', sans-serif;
+
+// Shadows
+$box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+$dropdown-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+
+// Breakpoints
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;

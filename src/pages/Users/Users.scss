@@ -1,0 +1,40 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.users-page {
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $text-primary;
+    margin-bottom: 40px;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    margin-bottom: 40px;
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__error {
+    @include flex-center;
+    min-height: 200px;
+    background: $white;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+
+    p {
+      font-size: 16px;
+      color: $text-secondary;
+    }
+  }
+}

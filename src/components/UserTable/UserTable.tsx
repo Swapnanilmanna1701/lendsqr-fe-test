@@ -86,6 +86,14 @@ const statusClassMap: Record<UserStatus, string> = {
   Blacklisted: "blacklisted",
 };
 
+/* ───────────── Select Chevron Icon ───────────── */
+
+const SelectChevron = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#213F7D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 /* ───────────── Filter Popup ───────────── */
 
 interface FilterPopupProps {
@@ -136,72 +144,85 @@ const FilterPopup: React.FC<FilterPopupProps> = ({
   return (
     <div className="user-table__filter-popup" ref={ref}>
       <form onSubmit={handleSubmit}>
-        <div className="user-table__filter-field">
-          <label>Organization</label>
-          <select
-            value={local.organization || ""}
-            onChange={(e) => handleChange("organization", e.target.value)}
-          >
-            <option value="">Select</option>
-            {organizations.map((org) => (
-              <option key={org} value={org}>
-                {org}
-              </option>
-            ))}
-          </select>
-        </div>
+        <div className="user-table__filter-grid">
+          <div className="user-table__filter-field">
+            <label>Organization</label>
+            <div className="user-table__filter-select-wrapper">
+              <select
+                value={local.organization || ""}
+                onChange={(e) => handleChange("organization", e.target.value)}
+              >
+                <option value="">Select</option>
+                {organizations.map((org) => (
+                  <option key={org} value={org}>
+                    {org}
+                  </option>
+                ))}
+              </select>
+              <span className="user-table__filter-select-icon">
+                <SelectChevron />
+              </span>
+            </div>
+          </div>
 
-        <div className="user-table__filter-field">
-          <label>Username</label>
-          <input
-            type="text"
-            placeholder="User"
-            value={local.username || ""}
-            onChange={(e) => handleChange("username", e.target.value)}
-          />
-        </div>
+          <div className="user-table__filter-field">
+            <label>Username</label>
+            <input
+              type="text"
+              placeholder="User"
+              value={local.username || ""}
+              onChange={(e) => handleChange("username", e.target.value)}
+            />
+          </div>
 
-        <div className="user-table__filter-field">
-          <label>Email</label>
-          <input
-            type="text"
-            placeholder="Email"
-            value={local.email || ""}
-            onChange={(e) => handleChange("email", e.target.value)}
-          />
-        </div>
+          <div className="user-table__filter-field">
+            <label>Email</label>
+            <input
+              type="text"
+              placeholder="Email"
+              value={local.email || ""}
+              onChange={(e) => handleChange("email", e.target.value)}
+            />
+          </div>
 
-        <div className="user-table__filter-field">
-          <label>Date</label>
-          <input
-            type="date"
-            value={local.date || ""}
-            onChange={(e) => handleChange("date", e.target.value)}
-          />
-        </div>
+          <div className="user-table__filter-field">
+            <label>Date</label>
+            <input
+              type="date"
+              placeholder="Date"
+              value={local.date || ""}
+              onChange={(e) => handleChange("date", e.target.value)}
+            />
+          </div>
 
-        <div className="user-table__filter-field">
-          <label>Phone Number</label>
-          <input
-            type="text"
-            placeholder="Phone Number"
-            value={local.phoneNumber || ""}
-            onChange={(e) => handleChange("phoneNumber", e.target.value)}
-          />
-        </div>
+          <div className="user-table__filter-field">
+            <label>Phone Number</label>
+            <input
+              type="text"
+              placeholder="Phone Number"
+              value={local.phoneNumber || ""}
+              onChange={(e) => handleChange("phoneNumber", e.target.value)}
+            />
+          </div>
 
-        <div className="user-table__filter-field">
-          <label>Status</label>
-          <select
-            value={local.status || ""}
-            onChange={(e) => handleChange("status", e.target.value)}
-          >
-            <option value="">Select</option>
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-            <option value="Pending">Pending</option>
-            <option value="Blacklisted">Blacklisted</option>
-          </select>
+          <div className="user-table__filter-field">
+            <label>Status</label>
+            <div className="user-table__filter-select-wrapper">
+              <select
+                value={local.status || ""}
+                onChange={(e) => handleChange("status", e.target.value)}
+              >
+                <option value="">Select</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <option value="Pending">Pending</option>
+                <option value="Blacklisted">Blacklisted</option>
+              </select>
+              <span className="user-table__filter-select-icon">
+                <SelectChevron />
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="user-table__filter-actions">

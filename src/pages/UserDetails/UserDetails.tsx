@@ -212,12 +212,16 @@ const UserDetails = () => {
       <div className="user-details__header">
         <h1 className="user-details__title">User Details</h1>
         <div className="user-details__actions">
-          <button className="user-details__btn user-details__btn--blacklist">
-            BLACKLIST USER
-          </button>
-          <button className="user-details__btn user-details__btn--activate">
-            ACTIVATE USER
-          </button>
+          {user.status !== "Blacklisted" && (
+            <button className="user-details__btn user-details__btn--blacklist">
+              BLACKLIST USER
+            </button>
+          )}
+          {user.status !== "Active" && (
+            <button className="user-details__btn user-details__btn--activate">
+              ACTIVATE USER
+            </button>
+          )}
         </div>
       </div>
 

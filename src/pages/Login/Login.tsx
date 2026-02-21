@@ -1,6 +1,7 @@
 import { useState, useEffect, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { getFromLocalStorage } from "../../utils/localStorage";
+import signInIllustration from "../../assets/images/sign-in-illustration.png";
 import "./Login.scss";
 
 const Login = () => {
@@ -90,143 +91,10 @@ const Login = () => {
 
         {/* Sign-in Illustration */}
         <div className="login-page__illustration">
-          <svg
-            width="600"
-            height="340"
-            viewBox="0 0 600 340"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* Floor / ground line */}
-            <ellipse cx="300" cy="320" rx="260" ry="12" fill="#E8E3F3" />
-
-            {/* Desk */}
-            <rect x="140" y="200" width="240" height="10" rx="3" fill="#344E7D" />
-            <rect x="160" y="210" width="8" height="108" rx="2" fill="#344E7D" />
-            <rect x="352" y="210" width="8" height="108" rx="2" fill="#344E7D" />
-
-            {/* Laptop base */}
-            <rect x="195" y="170" width="130" height="30" rx="4" fill="#545F7D" />
-            {/* Laptop screen */}
-            <rect x="200" y="105" width="120" height="68" rx="4" fill="#213F7D" />
-            {/* Screen content */}
-            <rect x="210" y="115" width="100" height="48" rx="2" fill="#39CDCC" opacity="0.3" />
-            <rect x="220" y="125" width="40" height="4" rx="2" fill="#FFFFFF" opacity="0.8" />
-            <rect x="220" y="133" width="60" height="4" rx="2" fill="#FFFFFF" opacity="0.6" />
-            <rect x="220" y="141" width="30" height="4" rx="2" fill="#FFFFFF" opacity="0.4" />
-            {/* Screen glow */}
-            <rect x="210" y="115" width="100" height="48" rx="2" fill="#39CDCC" opacity="0.08" />
-
-            {/* Person - body */}
-            {/* Head */}
-            <circle cx="380" cy="100" r="28" fill="#F2C09E" />
-            {/* Hair */}
-            <path
-              d="M352 90c0-18 12-32 28-32s28 14 28 32c0 2-1 4-2 5 1-8-5-22-26-22s-27 14-26 22c-1-1-2-3-2-5z"
-              fill="#213F7D"
-            />
-            {/* Eyes */}
-            <circle cx="372" cy="100" r="2.5" fill="#213F7D" />
-            <circle cx="390" cy="100" r="2.5" fill="#213F7D" />
-            {/* Mouth */}
-            <path
-              d="M376 110c2 3 6 3 8 0"
-              stroke="#C08E76"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              fill="none"
-            />
-
-            {/* Torso / shirt */}
-            <path
-              d="M355 135c0-8 11-14 25-14s25 6 25 14l5 65h-60l5-65z"
-              fill="#39CDCC"
-            />
-            {/* Collar detail */}
-            <path
-              d="M370 121l10 10 10-10"
-              stroke="#2DB5B5"
-              strokeWidth="2"
-              fill="none"
-            />
-
-            {/* Left arm reaching to laptop */}
-            <path
-              d="M355 140c-15 8-30 25-40 55l-5 5"
-              stroke="#F2C09E"
-              strokeWidth="14"
-              strokeLinecap="round"
-              fill="none"
-            />
-            {/* Left hand on keyboard */}
-            <circle cx="308" cy="198" r="8" fill="#F2C09E" />
-
-            {/* Right arm */}
-            <path
-              d="M405 140c10 10 15 30 12 50"
-              stroke="#F2C09E"
-              strokeWidth="14"
-              strokeLinecap="round"
-              fill="none"
-            />
-            {/* Right hand */}
-            <circle cx="416" cy="190" r="8" fill="#F2C09E" />
-
-            {/* Chair */}
-            <rect x="355" y="200" width="50" height="8" rx="4" fill="#213F7D" />
-            <rect x="375" y="208" width="10" height="30" rx="2" fill="#344E7D" />
-            <rect x="360" y="238" width="40" height="6" rx="3" fill="#344E7D" />
-            {/* Chair wheels */}
-            <circle cx="365" cy="248" r="5" fill="#545F7D" />
-            <circle cx="395" cy="248" r="5" fill="#545F7D" />
-
-            {/* Legs */}
-            <path
-              d="M365 200l-10 70"
-              stroke="#213F7D"
-              strokeWidth="12"
-              strokeLinecap="round"
-            />
-            <path
-              d="M395 200l10 70"
-              stroke="#213F7D"
-              strokeWidth="12"
-              strokeLinecap="round"
-            />
-            {/* Shoes */}
-            <ellipse cx="353" cy="273" rx="12" ry="6" fill="#344E7D" />
-            <ellipse cx="407" cy="273" rx="12" ry="6" fill="#344E7D" />
-
-            {/* Floating elements - decorative */}
-            {/* Teal circle */}
-            <circle cx="100" cy="80" r="18" fill="#39CDCC" opacity="0.2" />
-            <circle cx="100" cy="80" r="8" fill="#39CDCC" opacity="0.4" />
-            {/* Blue circle */}
-            <circle cx="500" cy="60" r="14" fill="#213F7D" opacity="0.15" />
-            {/* Small dots */}
-            <circle cx="80" cy="200" r="4" fill="#39CDCC" opacity="0.3" />
-            <circle cx="520" cy="150" r="5" fill="#213F7D" opacity="0.2" />
-            <circle cx="130" cy="280" r="3" fill="#39CDCC" opacity="0.25" />
-            <circle cx="490" cy="250" r="6" fill="#213F7D" opacity="0.12" />
-
-            {/* Login form mockup on screen */}
-            <rect x="230" y="120" width="50" height="6" rx="3" fill="#FFFFFF" opacity="0.5" />
-            {/* Cursor blink */}
-            <rect x="280" y="120" width="2" height="6" fill="#FFFFFF" opacity="0.7" />
-
-            {/* Plant pot */}
-            <rect x="460" y="280" width="30" height="35" rx="3" fill="#C08E76" />
-            <path
-              d="M468 280c-3-20 3-40 8-50 2 12 12 30 18 50h-26z"
-              fill="#39CDCC"
-              opacity="0.6"
-            />
-            <path
-              d="M478 280c2-25 8-35 12-42-1 10-2 28 0 42h-12z"
-              fill="#39CDCC"
-              opacity="0.8"
-            />
-          </svg>
+          <img
+            src={signInIllustration}
+            alt="Sign in illustration"
+          />
         </div>
       </div>
 

@@ -1,0 +1,134 @@
+<svg width="600" height="338" viewBox="0 0 600 338" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background floating shapes -->
+  <circle cx="67" cy="72" r="22" fill="#213F7D" opacity="0.06"/>
+  <circle cx="530" cy="45" r="16" fill="#39CDCC" opacity="0.12"/>
+  <circle cx="555" cy="295" r="10" fill="#213F7D" opacity="0.08"/>
+  <circle cx="40" cy="260" r="8" fill="#39CDCC" opacity="0.15"/>
+  <rect x="505" y="110" width="18" height="18" rx="3" transform="rotate(15 505 110)" fill="#39CDCC" opacity="0.1"/>
+  <rect x="55" y="150" width="14" height="14" rx="2" transform="rotate(-10 55 150)" fill="#213F7D" opacity="0.07"/>
+
+  <!-- Floor shadow -->
+  <ellipse cx="300" cy="322" rx="250" ry="14" fill="#DEDDE3" opacity="0.6"/>
+
+  <!-- Monitor Stand / Desk -->
+  <rect x="95" y="195" width="310" height="12" rx="4" fill="#344E7D"/>
+  <!-- Desk legs -->
+  <rect x="120" y="207" width="8" height="112" rx="3" fill="#2C3E6B"/>
+  <rect x="372" y="207" width="8" height="112" rx="3" fill="#2C3E6B"/>
+  <!-- Desk crossbar -->
+  <rect x="128" y="270" width="244" height="5" rx="2" fill="#344E7D" opacity="0.4"/>
+
+  <!-- Laptop / Monitor -->
+  <!-- Screen bezel -->
+  <rect x="150" y="72" width="200" height="125" rx="6" fill="#344E7D"/>
+  <!-- Screen -->
+  <rect x="158" y="80" width="184" height="105" rx="3" fill="#213F7D"/>
+  <!-- Screen content - login form mockup -->
+  <rect x="185" y="100" width="130" height="65" rx="4" fill="#FFFFFF" opacity="0.08"/>
+  <!-- Avatar circle on screen -->
+  <circle cx="250" cy="113" r="8" fill="#39CDCC" opacity="0.5"/>
+  <!-- Input fields on screen -->
+  <rect x="210" y="128" width="80" height="6" rx="3" fill="#FFFFFF" opacity="0.2"/>
+  <rect x="210" y="140" width="80" height="6" rx="3" fill="#FFFFFF" opacity="0.15"/>
+  <!-- Button on screen -->
+  <rect x="220" y="152" width="60" height="8" rx="4" fill="#39CDCC" opacity="0.6"/>
+  <!-- Screen shine -->
+  <rect x="158" y="80" width="40" height="105" rx="3" fill="#FFFFFF" opacity="0.03"/>
+
+  <!-- Laptop base / keyboard -->
+  <path d="M140 197 L155 185 L345 185 L360 197 Z" fill="#545F7D"/>
+  <rect x="170" y="188" width="160" height="5" rx="2" fill="#6B7A9E" opacity="0.3"/>
+
+  <!-- Coffee mug on desk -->
+  <rect x="108" y="182" width="18" height="14" rx="3" fill="#E8E3F3"/>
+  <rect x="104" y="180" width="26" height="4" rx="2" fill="#D4CFE5"/>
+  <!-- Coffee -->
+  <rect x="110" y="184" width="14" height="6" rx="2" fill="#C4A882" opacity="0.5"/>
+  <!-- Mug handle -->
+  <path d="M126 185 C132 185 132 193 126 193" stroke="#D4CFE5" stroke-width="2.5" fill="none"/>
+
+  <!-- Person -->
+  <!-- Chair back -->
+  <path d="M390 145 C390 135 420 125 445 130 L450 195 L385 195 Z" fill="#344E7D" opacity="0.5"/>
+  <rect x="383" y="130" width="70" height="8" rx="4" fill="#344E7D"/>
+
+  <!-- Legs (pants) -->
+  <path d="M398 240 L388 305" stroke="#213F7D" stroke-width="14" stroke-linecap="round"/>
+  <path d="M438 240 L448 305" stroke="#213F7D" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Shoes -->
+  <ellipse cx="384" cy="310" rx="16" ry="7" fill="#1A3160"/>
+  <ellipse cx="452" cy="310" rx="16" ry="7" fill="#1A3160"/>
+
+  <!-- Chair seat -->
+  <rect x="375" y="230" width="86" height="12" rx="5" fill="#344E7D"/>
+  <!-- Chair stem -->
+  <rect x="413" y="242" width="10" height="35" rx="3" fill="#2C3E6B"/>
+  <!-- Chair base -->
+  <rect x="393" y="277" width="50" height="7" rx="3.5" fill="#2C3E6B"/>
+  <!-- Chair wheels -->
+  <circle cx="398" cy="287" r="5" fill="#545F7D"/>
+  <circle cx="438" cy="287" r="5" fill="#545F7D"/>
+
+  <!-- Torso / Shirt -->
+  <path d="M395 168 C395 152 410 140 420 140 C430 140 445 152 445 168 L450 230 L390 230 Z" fill="#39CDCC"/>
+  <!-- Shirt collar -->
+  <path d="M408 143 L420 156 L432 143" stroke="#2DB5B5" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Shirt detail -->
+  <line x1="420" y1="158" x2="420" y2="200" stroke="#2DB5B5" stroke-width="1" opacity="0.4"/>
+
+  <!-- Head -->
+  <circle cx="420" cy="118" r="26" fill="#F2C09E"/>
+  <!-- Hair -->
+  <path d="M394 108 C394 88 407 78 420 78 C433 78 446 88 446 108 C446 110 445 112 444 113 C444 104 436 88 420 88 C404 88 396 104 396 113 C395 112 394 110 394 108Z" fill="#213F7D"/>
+  <!-- Hair side detail -->
+  <path d="M394 108 C392 112 392 118 394 122" stroke="#1A3160" stroke-width="2" fill="none"/>
+  <path d="M446 108 C448 112 448 118 446 122" stroke="#1A3160" stroke-width="2" fill="none"/>
+
+  <!-- Face -->
+  <!-- Eyebrows -->
+  <path d="M408 107 L414 105" stroke="#1A3160" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M426 105 L432 107" stroke="#1A3160" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <circle cx="411" cy="112" r="2.5" fill="#213F7D"/>
+  <circle cx="429" cy="112" r="2.5" fill="#213F7D"/>
+  <!-- Eye shine -->
+  <circle cx="412" cy="111" r="0.8" fill="#FFFFFF"/>
+  <circle cx="430" cy="111" r="0.8" fill="#FFFFFF"/>
+  <!-- Nose -->
+  <path d="M418 117 C419 119 421 119 422 117" stroke="#D4A484" stroke-width="1" fill="none"/>
+  <!-- Mouth - smile -->
+  <path d="M414 124 C417 128 423 128 426 124" stroke="#D4876E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Left arm (reaching toward laptop) -->
+  <path d="M395 170 C380 180 360 190 340 197" stroke="#F2C09E" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <!-- Left hand on keyboard -->
+  <circle cx="338" cy="198" r="8" fill="#F2C09E"/>
+  <!-- Fingers on keyboard -->
+  <circle cx="333" cy="195" r="3" fill="#F2C09E"/>
+  <circle cx="343" cy="195" r="3" fill="#F2C09E"/>
+
+  <!-- Right arm -->
+  <path d="M445 170 C455 180 458 195 455 210" stroke="#F2C09E" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <!-- Right hand -->
+  <circle cx="454" cy="212" r="8" fill="#F2C09E"/>
+
+  <!-- Plant pot -->
+  <path d="M480 290 L484 320 L510 320 L514 290 Z" fill="#C08E76"/>
+  <!-- Plant pot rim -->
+  <rect x="477" y="286" width="40" height="6" rx="3" fill="#D4A484"/>
+  <!-- Plant leaves -->
+  <path d="M497 286 C492 265 485 250 478 240 C488 248 495 260 497 275Z" fill="#39CDCC" opacity="0.7"/>
+  <path d="M497 286 C502 260 510 245 520 238 C512 248 505 262 500 278Z" fill="#2DB5B5" opacity="0.8"/>
+  <path d="M497 286 C495 270 490 258 484 250 C490 255 496 268 497 280Z" fill="#39CDCC" opacity="0.5"/>
+  <path d="M497 286 C500 268 508 255 515 248 C509 255 502 268 499 280Z" fill="#2DB5B5" opacity="0.6"/>
+  <!-- Plant stem -->
+  <line x1="497" y1="286" x2="497" y2="265" stroke="#2DB5B5" stroke-width="2"/>
+
+  <!-- Small floating decorations -->
+  <circle cx="85" cy="95" r="4" fill="#39CDCC" opacity="0.3"/>
+  <circle cx="520" cy="170" r="3" fill="#213F7D" opacity="0.2"/>
+  <circle cx="75" cy="300" r="5" fill="#39CDCC" opacity="0.15"/>
+  <path d="M540 70 L545 60 L550 70 Z" fill="#213F7D" opacity="0.1"/>
+  <path d="M60 195 L65 188 L70 195 Z" fill="#39CDCC" opacity="0.12"/>
+</svg>
